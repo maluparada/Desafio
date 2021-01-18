@@ -11,13 +11,6 @@ const uploadFiles = async (req, res) => {
 
     return res.send(`Files have been uploaded.`);
 
-    // console.log(req.file);
-
-    // if (req.file == undefined) {
-    //   return res.send(`You must select a file.`);
-    // }
-
-    // return res.send(`File has been uploaded.`);
   } catch (error) {
     console.log(error);
 
@@ -25,8 +18,6 @@ const uploadFiles = async (req, res) => {
       return res.send("Too many files to upload.");
     }
     return res.send(`Error when trying upload many files: ${error}`);
-
-    // return res.send(`Error when trying upload image: ${error}`);
   }
 };
 
